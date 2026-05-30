@@ -46,6 +46,10 @@ const Home = () => {
 
   const handleSearch = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement, Element>) => {
     setSearch(event.target.value);
+
+    const newList = movies.filter( (movies) => movies.title.toLowerCase().includes(search.toLowerCase()));
+
+    setSearchList(newList);
   }
 
  
