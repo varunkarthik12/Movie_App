@@ -14,18 +14,34 @@ const MovieList = ({recommendList} : Props) => {
     <Box sx={{
       display : "flex",
       gap : 2,
-      overflowX : "scroll"
+      overflowX : "scroll",
+      flexDirection : "row",
+      whiteSpace : "nowrap",
+      width : "100%"
     }}>
-      {recommendList.map( (movie) => {
-        return (
-          <Grid component="div" key= {movie.id} > 
-              <Paper elevation={0} sx = {{backgroundColor : 'transparent'}}>
-                  <MovieCard movie = {movie}/>
-              </Paper>
+      {/* <Grid
+          container
+          sx= {{
+              display : "flex",
+              flexWrap : "nowrap",
+              gap : 2,
+              width : "fit-content"
+          }}> */}
+              {recommendList.map( (movie) => {
+                return (
+                  <Grid component="div" key= {movie.id} sx = {{
+                    flexShrink : 0
+                  }}> 
+                      <Paper elevation={0} sx = {{backgroundColor : 'transparent'}}>
+                          <MovieCard movie = {movie}/>
+                      </Paper>
 
-          </Grid>
+                  </Grid>
         )
       })}
+
+      {/* </Grid> */}
+      
 
     </Box>
   )

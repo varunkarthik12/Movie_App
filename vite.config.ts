@@ -19,6 +19,12 @@ export default defineConfig({
       exclude: /node_modules/,
       plugins: babelPlugins,
       presets: ['@babel/preset-react', '@babel/preset-typescript'],
+   
     }),
-  ]
+    
+  ],
+     server: {
+    host: '0.0.0.0',
+    allowedHosts : true
+  }
 });

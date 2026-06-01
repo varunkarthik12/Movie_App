@@ -121,7 +121,15 @@ const Home = () => {
                     </Box>
               ):(
                 <Box sx = {{width : "100%"}}>
-                    <Typography>found</Typography>
+                    <Box sx = {{width : "100"}}>
+                          <Typography variant='h5' sx={{
+                            my : 6,
+                            fontWeight : 400
+                          }}>
+                              Found {searchList.length} for {search}
+                          </Typography> 
+                          <MovieList recommendList = {searchList}></MovieList>
+                      </Box>
 
                 </Box>
               )}

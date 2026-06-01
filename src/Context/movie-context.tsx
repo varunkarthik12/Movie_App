@@ -48,7 +48,7 @@ const MovieReducer =(state : MovieState, action : MovieAction):MovieState =>  {
                     (movie) => {
                         if(movie.id === action.id)
                         {
-                        return{...movie, isBookMarked: !movie.isBookmarked};
+                        return{...movie, isBookmarked: !movie.isBookmarked};
                         
                         }
                         return movie;
@@ -58,6 +58,8 @@ const MovieReducer =(state : MovieState, action : MovieAction):MovieState =>  {
                 return state;
             
     }
+
+    
 
 };
 
